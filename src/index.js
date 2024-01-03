@@ -1,10 +1,16 @@
-import React, { useState } from "react";
-import { render } from "react-dom";
+import { getUsers } from "./common/usersAPI";
+import "./style.css";
+console.log("Hello webpack!");
 
-function App() {
-    const [state, setState] = useState("CLICK ME");
+getUsers().then(json => console.log(json));
 
-    return <button onClick={() => setState("CLICKED")}>{state}</button>;
-}
+// import React, { useState } from "react";
+// import { render } from "react-dom";
 
-render(<App />, document.getElementById("root"));
+// function App() {
+//     const [state, setState] = useState("CLICK ME");
+
+//     return <button onClick={() => setState("CLICKED")}>{state}</button>;
+// }
+
+// render(<App />, document.getElementById("root"));
